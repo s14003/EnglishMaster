@@ -1,5 +1,6 @@
 package com.example.s14003.englishmaster;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -166,29 +167,30 @@ public class Mondai extends AppCompatActivity
             speech(label[MonNum][1]);
         } else if (button == v) {
 
-
-
-
-                //Intent it = new Intent(this, Lesson2.class);
-                //startActivity(it);
-
-
+            if (MonNum == 13) {
+                Log.d("finish","push");
+                Intent it = new Intent(this, Finish.class);
+                startActivity(it);
+            } else {
+                Log.d("Next","Push");
                 MonNum++;
-                buttonDog = (Button)findViewById(R.id.ButtonLeft);
+                buttonDog = (Button) findViewById(R.id.ButtonLeft);
                 buttonDog.setText(label[MonNum][0]);
 
-                buttonCat = (Button)findViewById(R.id.ButtonMid);
+                buttonCat = (Button) findViewById(R.id.ButtonMid);
                 buttonCat.setText(label[MonNum][1]);
 
-                buttonPig = (Button)findViewById(R.id.ButtonRight);
+                buttonPig = (Button) findViewById(R.id.ButtonRight);
                 buttonPig.setText(label[MonNum][2]);
 
-                ImageView iv = (ImageView)findViewById(R.id.Mon);
+                ImageView iv = (ImageView) findViewById(R.id.Mon);
                 Resources res = getResources();
                 bmp = BitmapFactory.decodeResource(res, images[MonNum]);
                 iv.setImageBitmap(bmp);
 
                 tts = new TextToSpeech(this, this);
+
+            }
 
 
 
