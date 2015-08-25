@@ -1,6 +1,8 @@
 package com.example.s14003.englishmaster;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -52,8 +54,9 @@ public class Mondai extends AppCompatActivity
 
 
 
-    int[]images = {R.drawable.inu,R.drawable.cat,R.drawable.car,R.drawable.bag,R.drawable.ant,R.drawable.red,R.drawable.cow,R.drawable.key,
-            R.drawable.box,R.drawable.north,R.drawable.sky,R.drawable.east,R.drawable.west,R.drawable.south};
+    int[]images = {R.drawable.inu,R.drawable.cat,R.drawable.car,R.drawable.bag,R.drawable.ant,
+            R.drawable.red,R.drawable.cow,R.drawable.key, R.drawable.box,R.drawable.north,
+            R.drawable.sky,R.drawable.east,R.drawable.west,R.drawable.south};
 
 
 
@@ -90,7 +93,7 @@ public class Mondai extends AppCompatActivity
 
         time=(TextView)findViewById(R.id.time);
         //btn3=(Button)findViewById(R.id.stop);
-        cdt = new MyCountDownTimer(30*1000, 100);
+        cdt = new MyCountDownTimer(60*1000, 100);
         cdt.start();
 
         tts = new TextToSpeech(this, this);
@@ -171,6 +174,21 @@ public class Mondai extends AppCompatActivity
                 Log.d("finish","push");
                 Intent it = new Intent(this, Finish.class);
                 startActivity(it);
+
+                String time1 = time.getText().toString();
+                String[] time2 = time1.split(":", 0);
+                SharedPreferences data = getSharedPreferences("Data", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = data.edit();
+
+                //TextView time = (TextView) findViewById(R.id.time);
+
+                editor.putInt("TIME", Integer.parseInt(time2[1]));
+
+
+                editor.apply();
+
+                cdt.cancel();
+
             } else {
                 Log.d("Next","Push");
                 MonNum++;
