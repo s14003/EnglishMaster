@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import java.util.Locale;
 
 
@@ -33,24 +34,26 @@ public class Mondai extends AppCompatActivity
     private Button button;
     private Bitmap bmp;
 
+    private TextView Ans;
+
     public MyCountDownTimer cdt;
     public TextView time;
 
     private int MonNum = 0;
-    String[][] label = {{"Dog","Cat","Pig"},
-            {"Dog","Cat","Pig"},
-            {"Dog","Car","Bee"},
-            {"Mail", "Boy","Bag"},
-            {"Smile","Sea","Ant"},
-            {"Shine", "Rad","Red"},
-            {"Cow","Ball","Buffalo"},
-            {"Get","Green","Key"},
-            {"Six","Box","Fox"},
-            {"Back","Norse","North"},
-            {"Face","Star","Sky"},
-            {"East","Time","Pen"},
-            {"Ring","west","Big"},
-            {"Nose","south","Cat"}};
+    String[][] label = {{"Dog","Cat","Pig",""},
+            {"Dog","Cat","Pig",""},
+            {"Dog","Car","Bee",""},
+            {"Mail", "Boy","Bag",""},
+            {"Smile","Sea","Ant",""},
+            {"Shine", "Rad","Red",""},
+            {"Cow","Ball","Buffalo",""},
+            {"Get","Green","Key",""},
+            {"Six","Box","Fox",""},
+            {"Back","Norse","North",""},
+            {"Face","Star","Sky",""},
+            {"East","Time","Pen",""},
+            {"Ring","west","Big",""},
+            {"Nose","south","Cat",""}};
 
 
 
@@ -80,6 +83,9 @@ public class Mondai extends AppCompatActivity
         buttonPig = (Button)findViewById(R.id.ButtonRight);
         buttonPig.setText(label[MonNum][2]);
         buttonPig.setOnClickListener(this);
+
+        Ans = (TextView)findViewById(R.id.Ans);
+        Ans.setText(label[MonNum][3]);
 
         button = (Button)findViewById(R.id.button);
         button.setOnClickListener(this);
@@ -163,10 +169,13 @@ public class Mondai extends AppCompatActivity
     public void onClick(View v) {
 
         if (buttonDog == v) {
+            Ans.setText(label[MonNum][0]);
             speech(label[MonNum][0]);
         } else if (buttonPig == v) {
+            Ans.setText(label[MonNum][2]);
             speech(label[MonNum][2]);
         } else if (buttonCat == v) {
+            Ans.setText(label[MonNum][1]);
             speech(label[MonNum][1]);
         } else if (button == v) {
             if (MonNum == 13) {
@@ -200,6 +209,9 @@ public class Mondai extends AppCompatActivity
 
                 buttonPig = (Button) findViewById(R.id.ButtonRight);
                 buttonPig.setText(label[MonNum][2]);
+
+                Ans = (TextView)findViewById(R.id.Ans);
+                Ans.setText(label[MonNum][3]);
 
                 ImageView iv = (ImageView) findViewById(R.id.Mon);
                 Resources res = getResources();
