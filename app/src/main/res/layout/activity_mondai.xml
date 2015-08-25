@@ -68,4 +68,12 @@
         android:layout_toRightOf="@+id/linearLayout"
         android:layout_toEndOf="@+id/linearLayout" />
 
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/Ans"
+        android:layout_below="@+id/time"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
