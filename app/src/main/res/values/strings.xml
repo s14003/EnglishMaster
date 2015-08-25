@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EnglishMaster</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_mondai">Mondai</string>
+    <string name="title_activity_sentaku">Sentaku</string>
+</resources>

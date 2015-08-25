@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.s14003.englishmaster.Sentaku">
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sonota"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/imagebuton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:src="@drawable/teigakunen"
+        android:layout_marginTop="98dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/imagebuton2"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:src="@drawable/kougakunen"
+        android:layout_marginTop="111dp"
+        android:layout_below="@+id/imagebuton"
+        android:layout_alignLeft="@+id/imagebuton"
+        android:layout_alignStart="@+id/imagebuton" />
+
+
+
+    <ImageButton
+        android:id="@+id/imagebuton3"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:src="@drawable/tyuuni"
+        android:layout_marginTop="129dp"
+        android:layout_below="@+id/imagebuton2"
+        android:layout_alignLeft="@+id/imagebuton2"
+        android:layout_alignStart="@+id/imagebuton2" />
+
+    <ImageButton
+        android:id="@+id/imagebuton4"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:src="@drawable/tyuusan"
+        android:layout_marginTop="101dp"
+        android:layout_below="@+id/imagebuton3"
+        android:layout_alignLeft="@+id/imagebuton3"
+        android:layout_alignStart="@+id/imagebuton3" />
+
+
+</RelativeLayout>
