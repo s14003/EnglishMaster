@@ -64,7 +64,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
             Intent it = new Intent(this, Sentaku.class);
             startActivity(it);
         } else if (image2 == v) {
-
+            Intent it = new Intent(this, Ranking.class);
+            startActivity(it);
         } else if (image3 == v) {
 
         }
