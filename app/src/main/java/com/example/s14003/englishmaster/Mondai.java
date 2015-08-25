@@ -39,7 +39,7 @@ public class Mondai extends AppCompatActivity
     private int MonNum = 0;
     String[][] label = {{"Dog","Cat","Pig"},
             {"Dog","Cat","Pig"},
-            {"Dog","Car","Pig"},
+            {"Dog","Car","Bee"},
             {"Mail", "Boy","Bag"},
             {"Smile","Sea","Ant"},
             {"Shine", "Rad","Red"},
@@ -169,7 +169,6 @@ public class Mondai extends AppCompatActivity
         } else if (buttonCat == v) {
             speech(label[MonNum][1]);
         } else if (button == v) {
-
             if (MonNum == 13) {
                 Log.d("finish","push");
                 Intent it = new Intent(this, Finish.class);
@@ -191,6 +190,7 @@ public class Mondai extends AppCompatActivity
 
             } else {
                 Log.d("Next","Push");
+
                 MonNum++;
                 buttonDog = (Button) findViewById(R.id.ButtonLeft);
                 buttonDog.setText(label[MonNum][0]);
