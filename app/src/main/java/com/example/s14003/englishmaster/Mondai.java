@@ -42,8 +42,8 @@ public class Mondai extends AppCompatActivity
     private int MonNum = 0;
     //選択画面のボタンの中身を設定
     String[][] label = {{"Dog","Cat","Pig",""},
-            {"Dog","Cat","Pig",""},
-            {"Dog","Car","Bee",""},
+            {"Two","Cat","fish",""},
+            {"Sea","Car","Bee",""},
             {"Mail", "Boy","Bag",""},
             {"Smile","Sea","Ant",""},
             {"Shine", "Rad","Red",""},
