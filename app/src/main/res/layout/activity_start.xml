@@ -6,13 +6,20 @@
 
     <ImageView
         android:id="@+id/start"
-        android:layout_width="wrap_content"
+        android:layout_width="1300dp"
         android:layout_height="wrap_content"
         android:src="@drawable/start"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-
+    <ImageView
+        android:id="@+id/tikyuu"
+        android:layout_width="1000dp"
+        android:layout_height="900dp"
+        android:src="@drawable/startbutton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
