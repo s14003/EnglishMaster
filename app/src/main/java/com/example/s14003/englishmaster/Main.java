@@ -7,25 +7,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-
+import android.widget.ImageView;
 
 
 public class Main extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton image1;
-    private ImageButton image2;
-    private ImageButton image3;
+    private ImageView image1;
+    private ImageView image2;
+    private ImageView image3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        image1 = (ImageButton)findViewById(R.id.imagebuton);
+        image1 = (ImageView)findViewById(R.id.imagebuton);
         image1.setOnClickListener(this);
-        image2 = (ImageButton)findViewById(R.id.imagebuton2);
+        image2 = (ImageView)findViewById(R.id.imagebuton2);
         image2.setOnClickListener(this);
-        image3 = (ImageButton)findViewById(R.id.imagebuton3);
+        image3 = (ImageView)findViewById(R.id.imagebuton3);
         image3.setOnClickListener(this);
 
 

@@ -12,7 +12,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imagebuton"
         android:layout_width="400dp"
         android:layout_height="80dp"
@@ -21,7 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imagebuton2"
         android:layout_width="400dp"
         android:layout_height="80dp"
@@ -33,7 +33,7 @@
 
 
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imagebuton3"
         android:layout_width="400dp"
         android:layout_height="80dp"

@@ -9,17 +9,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 
 public class Sentaku extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton tei;
+    private ImageView tei;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sentaku);
-        tei = (ImageButton)findViewById(R.id.imagebuton);
+        tei = (ImageView)findViewById(R.id.imagebuton);
         tei.setOnClickListener(this);
     }
 
