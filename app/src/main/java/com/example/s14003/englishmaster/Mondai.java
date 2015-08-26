@@ -40,6 +40,7 @@ public class Mondai extends AppCompatActivity
     public TextView time;
 
     private int MonNum = 0;
+    //選択画面のボタンの中身を設定
     String[][] label = {{"Dog","Cat","Pig",""},
             {"Dog","Cat","Pig",""},
             {"Dog","Car","Bee",""},
@@ -56,7 +57,7 @@ public class Mondai extends AppCompatActivity
             {"Nose","south","Cat",""}};
 
 
-
+    //画像を配置
     int[]images = {R.drawable.inu,R.drawable.cat,R.drawable.car,R.drawable.bag,R.drawable.ant,
             R.drawable.red,R.drawable.cow,R.drawable.key, R.drawable.box,R.drawable.north,
             R.drawable.sky,R.drawable.east,R.drawable.west,R.drawable.south};
@@ -98,7 +99,6 @@ public class Mondai extends AppCompatActivity
         tts = new TextToSpeech(this, this);
 
         time=(TextView)findViewById(R.id.time);
-        //btn3=(Button)findViewById(R.id.stop);
         cdt = new MyCountDownTimer(60*1000, 100);
         cdt.start();
 
@@ -167,7 +167,7 @@ public class Mondai extends AppCompatActivity
      */
     @Override
     public void onClick(View v) {
-
+        //選択ボタンの内容切り替え
         if (buttonDog == v) {
             Ans.setText(label[MonNum][0]);
             speech(label[MonNum][0]);
@@ -179,6 +179,8 @@ public class Mondai extends AppCompatActivity
             speech(label[MonNum][1]);
         } else if (button == v) {
             if (MonNum == 13) {
+
+                //最後まで来てからの処理
                 Log.d("finish","push");
                 Intent it = new Intent(this, Finish.class);
                 startActivity(it);
@@ -198,6 +200,8 @@ public class Mondai extends AppCompatActivity
                 cdt.cancel();
 
             } else {
+
+                //次の問題に移行するときの処理
                 Log.d("Next","Push");
 
                 MonNum++;
