@@ -42,8 +42,9 @@ public class Mondai extends AppCompatActivity
     private int MonNum = 0;
     //選択画面のボタンの中身を設定
     String[][] label = {{"Dog","Cat","Pig",""},
-            {"Two","Cat","fish",""},
+            {"Two","Cat","Fish",""},
             {"Sea","Car","Bee",""},
+            {"Sox","Sowd","Run",""},
             {"Mail", "Boy","Bag",""},
             {"Smile","Sea","Ant",""},
             {"Shine", "Rad","Red",""},
@@ -51,16 +52,17 @@ public class Mondai extends AppCompatActivity
             {"Get","Green","Key",""},
             {"Six","Box","Fox",""},
             {"Back","Norse","North",""},
+            {"Ear","Eye","Earth",""},
             {"Face","Star","Sky",""},
             {"East","Time","Pen",""},
-            {"Ring","west","Big",""},
-            {"Nose","south","Cat",""}};
+            {"Ring","West","Big",""},
+            {"Nose","South","Cat",""}};
 
 
     //画像を配置
-    int[]images = {R.drawable.inu,R.drawable.cat,R.drawable.car,R.drawable.bag,R.drawable.ant,
+    int[]images = {R.drawable.inu,R.drawable.cat,R.drawable.car,R.drawable.sox,R.drawable.bag,R.drawable.ant,
             R.drawable.red,R.drawable.cow,R.drawable.key, R.drawable.box,R.drawable.north,
-            R.drawable.sky,R.drawable.east,R.drawable.west,R.drawable.south};
+            R.drawable.eye,R.drawable.sky,R.drawable.east,R.drawable.west,R.drawable.south};
 
 
 
@@ -179,7 +181,7 @@ public class Mondai extends AppCompatActivity
             speech(label[MonNum][1]);
         //Next
         } else if (button == v) {
-            if (MonNum == 13) {
+            if (MonNum == 15) {
 
                 //最後まで来てからの処理
                 Log.d("finish","push");
