@@ -177,6 +177,7 @@ public class Mondai extends AppCompatActivity
         } else if (buttonCat == v) {
             Ans.setText(label[MonNum][1]);
             speech(label[MonNum][1]);
+        //Next
         } else if (button == v) {
             if (MonNum == 13) {
 
@@ -205,6 +206,7 @@ public class Mondai extends AppCompatActivity
                 Log.d("Next","Push");
 
                 MonNum++;
+
                 buttonDog = (Button) findViewById(R.id.ButtonLeft);
                 buttonDog.setText(label[MonNum][0]);
 
